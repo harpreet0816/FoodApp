@@ -4,8 +4,10 @@ import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
   const [listOfResturants, setlistOfResturants] = useState([]);
-  console.log("usestate default== body rendered  ", listOfResturants);
+  const [filteredRestaurants, setfilteredRestaurants] = useState([])
   const [searchText, setsearchText] = useState("");
+  console.log("usestate default== body rendered  ", listOfResturants);
+  console.log("usestate filtered resturant", filteredRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
@@ -16,9 +18,8 @@ const Body = () => {
     const json = await data.json();
     //optional chaining
     var jsonData = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    setlistOfResturants(
-      jsonData
-    );
+    setlistOfResturants(jsonData);
+    setfilteredRestaurants(jsonData);
   };
   // shimmer ui and conditional rendering
   //   if (listOfResturants.length === 0) {
@@ -46,8 +47,8 @@ const Body = () => {
               const filterResto = listOfResturants.filter((res) => (
                 res.info.name.toLowerCase().includes(searchText)
               ));
-              console.log(filterResto);
-              setlistOfResturants(filterResto);
+              console.log("filterfunction returns=",filterResto);
+              setfilteredRestaurants(filterResto);
             }}
           >
             Search
@@ -60,14 +61,14 @@ const Body = () => {
               (res) => res?.info?.avgRating > 4.3
             );
             setlistOfResturants(filteredList);
-            console.log(">>>>>yo", filteredList);
+            //console.log(">>>>>yo", filteredList);
           }}
         >
           Top Rated restaurant
         </button>
       </div>
       <div className="res-container">
-      {listOfResturants.map((restaurant) => (
+      {filteredRestaurants.map((restaurant) => (
         <RestaurantCard key={restaurant.info.id} resDa={restaurant} />
       ))}
       </div>

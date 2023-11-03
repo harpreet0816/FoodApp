@@ -5,10 +5,9 @@ const styleCard = {
   };
 
 const RestaurantCard = (props) => {
-     console.log("inside Restaurant card component")
+    // console.log("inside Restaurant card component")
     const { resDa } = props
     //******  somelike this {resName, cuisine} then on the write only <h1>{resName}<h1>*
-    //console.log(">>>>>Final PROps.info", resDa?.info);
     if(resDa.info){
     return (
       <div className="res-card" style={styleCard}>
