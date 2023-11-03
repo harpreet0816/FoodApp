@@ -1,0 +1,34 @@
+{
+    "name": "namastereact",
+    "version": "1.0.0",
+    "description": "This is namaste react",
+    "scripts": {
+      "start": "parcel index.html", "build": "parcel build index.html",
+      "test": "jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/harpreet0816/FoodApp.git"
+    },
+    "keywords": [
+      "React",
+      "React",
+      "DOM",
+      "Parcel"
+    ],
+    "author": "Harpreet",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/harpreet0816/FoodApp/issues"
+    },
+    "homepage": "https://github.com/harpreet0816/FoodApp#readme",
+    "devDependencies": {
+      "parcel": "^2.10.0",
+      "process": "^0.11.10"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "browserslist": ["last 2 versions"]
+  }
