@@ -1,7 +1,8 @@
 import { CDN_URL } from "../utils/constants";
 
 const styleCard = {
-    backgroundColor: "#f0f0f0",
+    // backgroundColor: "#f0f0f0",
+      backgroundColor: "#3c3737"
   };
 
 const RestaurantCard = (props) => {
