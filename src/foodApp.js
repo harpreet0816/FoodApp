@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ReactDom from "react-dom/client";
 import Header from "./components/Header.js";
 import Body  from "./components/Body";
@@ -7,6 +7,11 @@ import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
 import RestaurantMenu from "./components/RestaurantMenu.js";
+import Shimmer from "./components/Shimmer.js";
+
+//lazy loading or on demand loading , Load only when we request to load.
+const Grocery = lazy(() => import("./components/Grocery.js"));
+
 
 const AppLayout = () => {
   return (
@@ -33,6 +38,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "/grocery",
+        element: <Suspense fallback={<h1>Loading...😒</h1>}><Grocery /></Suspense> 
       },
       {
         path:"/restaurant/:resId",

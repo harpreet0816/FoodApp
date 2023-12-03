@@ -1,15 +1,19 @@
-#child {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* #child {
     color: antiquewhite;
 }
 #child2 {
     color: aquamarine;
 }
 
- /* FOood appp */
+
 
   *{
-    /* margin: 0; 
-    padding: 0; */
+ 
     box-sizing: border-box;
     color: whitesmoke;
   }
@@ -19,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
-    /* background-color: #bf0647; */
+    
 }
 .login{
     padding: 0 20px;
@@ -32,9 +36,7 @@
     height: 55px;
     margin: 12px;
 } 
-/* .nav-items{
-    
-} */
+
 .nav-items > ul {
     display: flex;
     padding: 0px 40px;
@@ -80,7 +82,7 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+    
 }
 .res-card {
     width: 200px;
@@ -91,7 +93,7 @@
     text-overflow: ellipsis;
 }
 .res-card:hover {
-    /* border: 1px solid black; */
+    
     box-shadow: 0 0 20px  rgb(38, 41, 44);    
     cursor: pointer;
     overflow: auto;
@@ -119,12 +121,12 @@
 .special-element {
     position: fixed;
     background-image: url("https://th.bing.com/th/id/OIP.V3pfm-CWX7wyHsT5ExiGOwHaEK?pid=ImgDet&rs=1");
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    opacity: 0.9; /* Adjust opacity as needed */
-    width: 100%; /* Take up the full width of the parent container */
-    height: 100vh; /* Take up the full height of the viewport */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    width: 100%; 
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: -1;
@@ -135,7 +137,7 @@
     font-weight: bold;
     font-size: 18px;
 }
-/* Restaurant menu */
+Restaurant menu
 .Link{
     text-decoration: none;
 }
@@ -146,16 +148,16 @@
     font-size: 20px;
 }
 .menuPrice{
-    /* color: #ffa8B6; */
+   
     color: white;
     font-weight: bold;
     font-size: 20px;
 }
-/* user */
+user
 .userCard{
     padding: 19px;
     border: 1px solid black;
 }
 button{
     color: black;
-}
+} */

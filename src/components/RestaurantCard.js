@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const styleCard = {
     // backgroundColor: "#f0f0f0",
-      backgroundColor: "#3c3737"
+      backgroundColor: "#f0f0f0"
   };
 
 const RestaurantCard = (props) => {
@@ -11,16 +11,16 @@ const RestaurantCard = (props) => {
     //******  somelike this {resName, cuisine} then on the write only <h1>{resName}<h1>*
     if(resDa.info){
     return (
-      <div className="res-card" style={styleCard}>
+      <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
         <img
-          className="res-logo"
+          className="rounded-lg w-[250px] h-[260px]"
           alt="res-logo"
           src={
             CDN_URL +
             resDa?.info?.cloudinaryImageId
           }
         ></img>
-        <h3>{resDa?.info?.name}</h3>
+        <h3 className="font-bold py-4 text-lg">{resDa?.info?.name}</h3>
         <h4>{resDa?.info?.cuisines.join(", ")}</h4>
         <h4>{resDa?.info?.costForTwo}</h4>
         <span>{resDa?.info?.avgRating} "stars"</span>
