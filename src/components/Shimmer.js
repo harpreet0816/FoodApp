@@ -1,27 +1,28 @@
-const Shimmer = ()=>{
-    return (<div className="shimmer-container">
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-     <div className="shimmer-card"></div>
-
+const Shimmer = () => {
+  return (
+    <div className="shimmer-container">
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
+      <div className="shimmer-card"></div>
     </div>
-  )}
-  export default Shimmer
+  );
+};
+export default Shimmer;
