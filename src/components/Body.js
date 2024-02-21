@@ -1,17 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContextInfo from "../utils/UserContext";
 const Body = () => {
+  console.log("body rendered")
   const [listOfResturants, setlistOfResturants] = useState([]);
-
+  console.log(listOfResturants, "list of resturants <>>>>><<<<>>>>>")
   const [filteredRestaurants, setfilteredRestaurants] = useState([]);
 
   const [searchText, setsearchText] = useState("");
-  console.log("usestate default== body rendered  ", listOfResturants);
-  console.log("usestate filtered resturant", filteredRestaurants);
 
+  const { loggInUser, setUserName} = useContext(UserContextInfo)
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   useEffect(() => {
     fetchData();
@@ -29,8 +30,8 @@ const Body = () => {
     // .data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         console.log(json, "<<<<json>>>>")
     var jsonData =
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-      console.log(jsonData, ">>>>>>>>>>>>>>>>>>>>>>>")
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      console.log(jsonData, "json data after chaining>>>>>>>>>>>>>>>>>>>>>>>")
     setlistOfResturants(jsonData);
     setfilteredRestaurants(jsonData);
   };
@@ -82,6 +83,14 @@ const Body = () => {
           >
             Top Rated restaurant
           </button>
+        </div>
+        <div className="m-4 p-4 flex items-center">
+        <input
+        type="text"
+        className="yoo px-4 py-2 bg-green-200 w-72 border-2 border-black rounded-2xl"
+        defaultValue={loggInUser}
+        onChange={(e) => setUserName(e.target.value)}
+      />
         </div>
       </div>
       <div className="flex flex-wrap">

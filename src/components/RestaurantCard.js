@@ -6,14 +6,14 @@ const styleCard = {
   };
 
 const RestaurantCard = (props) => {
-  console.log(props?.resDa,"<<<>>>>props<<>>>>")
-    // console.log("inside Restaurant card component")
+  console.log("RestaurantCard", ">>>>>>SGFSGS>>>>>>")
+  // console.log(props?.resDa,"<<<>>>>props<<>>>>")
     const { resDa } = props
-    console.log(resDa.info, "<<<<resDa>>>")
+    // console.log(resDa, "<<<<resDa>>>")
     //******  somelike this {resName, cuisine} then on the write only <h1>{resName}<h1>*
     if(resDa?.info){
     return (
-      <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+      <div id="restaurant-card" className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
         <img
           className="rounded-lg w-[250px] h-[260px]"
           alt="res-logo"
@@ -35,10 +35,11 @@ const RestaurantCard = (props) => {
   }
   }
   export const withPromotedLabel = (RestaurantCard)=>{
-    console.log(RestaurantCard, ">>>>>>SGFSGS>>>>>>")
+    // console.log(RestaurantCard, ">>>>>>SGFSGS>>>>>>")
+    console.log("RestaurantCardPromotedLabel", ">>>>>>SGFSGS>>>>>>")
     return (props)=>{
       const { resDa } = props
-      console.log(props, "<<<props>>>")
+      // console.log(props, "<<<props>>>")
       return (
         <div>
         <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>

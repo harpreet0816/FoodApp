@@ -1,7 +1,15 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 const RestaurantCategoryItemLists = ({ items }) => {
   const imagDef = "tkgjzysrduhijeenua5b";
+  const dispatch = useDispatch()
+  const handleAddButton = (item)=>{
+    // dispatch an action  and what we pass to addItem is the action.payload we use in cartslice
+    dispatch(addItem(item))
+    // when we use dispatch here and add reducer function her and pass something it will make an object like this and pass it to the action in the cartslice {payload: "pizza"}
+  }
   return (
     <div>
       {items.map((item) => (
@@ -24,7 +32,7 @@ const RestaurantCategoryItemLists = ({ items }) => {
           </div>
           <div>
           <div className="absolute">
-            <button className="px-6 py-2 bg-slate-700 shadow-lg rounded-lg text-green-400 mx-10 mt-25">Add +</button>
+            <button className="px-6 py-2 bg-slate-700 shadow-lg rounded-lg text-green-400 mx-10 mt-25" onClick={()=>handleAddButton(item)}>Add +</button>
             </div>
             <img
               src={
